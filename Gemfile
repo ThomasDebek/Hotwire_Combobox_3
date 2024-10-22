@@ -72,4 +72,4 @@ end
 
 gem "hotwire_combobox", "~> 0.3.1"
 gem "faker", "~> 3.4"
-
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
