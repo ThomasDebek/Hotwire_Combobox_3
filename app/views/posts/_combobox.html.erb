@@ -1,0 +1,6 @@
+<div class="youtube">
+  <%= form_with url: posts_url do |form| %>
+    <%= form.combobox :search, posts_path,
+                      name_when_new: :search, id: "posts-container", mobile_at: "0px" %>
+  <% end %>
+</div>
