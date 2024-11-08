@@ -3,7 +3,9 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.search params[:q]
+    @posts = Post.search(params[:q])
+    per_page = params[:page].to_i == 1 ? 4 : Kaminari.config.default_per_page
+    @posts = @posts.page(params[:page]).per(per_page)
   end
 
   # GET /posts/1 or /posts/1.json
